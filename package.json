@@ -1,0 +1,33 @@
+{
+  "name": "micro-host",
+  "version": "0.0.1",
+  "description": "Micro middleware to get the host of the request",
+  "keywords": [
+    "host",
+    "hostname",
+    "micro"
+  ],
+  "homepage": "https://github.com/cprecioso/micro-host#readme",
+  "bugs": {
+    "url": "https://github.com/cprecioso/micro-host/issues"
+  },
+  "repository": "git+https://github.com/cprecioso/micro-host.git",
+  "license": "ISC",
+  "author": "Carlos Precioso",
+  "files": [
+    "dist/**"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "rollup -c"
+  },
+  "devDependencies": {
+    "@cprecioso/tsconfig": "^0.0.4",
+    "@types/node": "^12.12.8",
+    "@wessberg/rollup-plugin-ts": "^1.1.80",
+    "rollup": "^1.27.0",
+    "typescript": "^3.7.2"
+  }
+}
