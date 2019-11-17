@@ -22,9 +22,9 @@ export const getHost = (
 }
 
 const host = <I extends IncomingMessage, R extends ServerResponse>(
-  innerListener: (req: I & { host?: string }, res: R) => void,
+  innerListener: (req: I & { host?: string }, res: R) => Promise<void>,
   options?: Partial<Options>
-): ((req: I, res: R) => void) => {
+): ((req: I, res: R) => Promise<void>) => {
   const _options: Options = { trustProxy: false, ...options }
   const trustFn =
     typeof _options.trustProxy === "function"
